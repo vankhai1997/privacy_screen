@@ -53,11 +53,11 @@ class PrivacyScreenPlugin : FlutterPlugin, MethodCallHandler, ActivityAware,
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         when (call.method) {
             "updateConfig" -> {
-                if (call.argument<Boolean>("enableSecureAndroid") == true) {
-                    activity.window?.addFlags(LayoutParams.FLAG_SECURE)
-                } else {
-                    activity.window?.clearFlags(LayoutParams.FLAG_SECURE)
-                }
+//                if (call.argument<Boolean>("enableSecureAndroid") == true) {
+//                    activity.window?.addFlags(LayoutParams.FLAG_SECURE)
+//                } else {
+//                    activity.window?.clearFlags(LayoutParams.FLAG_SECURE)
+//                }
                 autoLockAfterSeconds = call.argument<Number>("autoLockAfterSecondsAndroid") ?: -1
                 result.success(true)
             }
