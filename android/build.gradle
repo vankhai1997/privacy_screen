@@ -39,6 +39,7 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+    namespace 'ca.couver.privacy_screen'
 
     defaultConfig {
         minSdkVersion 16
